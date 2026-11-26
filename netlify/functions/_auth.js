@@ -30,7 +30,7 @@ function cookieValue(event, name) {
   return null;
 }
 
-function cookie(name, value, maxAge) {
+function makeCookie(name, value, maxAge) {
   return `${name}=${encodeURIComponent(value)}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${maxAge}`;
 }
 
@@ -111,7 +111,7 @@ module.exports = {
   b64url,
   sign,
   cookieValue,
-  cookie,
+  makeCookie,
   clearCookie,
   createSession,
   readSession,
